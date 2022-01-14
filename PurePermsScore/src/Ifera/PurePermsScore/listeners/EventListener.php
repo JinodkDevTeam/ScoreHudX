@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Ifera\PurePermsScore\listeners;
 
@@ -10,7 +10,6 @@ use Ifera\ScoreHud\scoreboard\ScoreTag;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\Player;
 use function is_null;
 use function strval;
 
@@ -48,7 +47,7 @@ class EventListener implements Listener{
 		$this->sendUpdate($event->getPlayer());
 	}
 
-	private function sendUpdate(Player $player): void{
+	private function sendUpdate(Player $player) : void{
 		(new PlayerTagsUpdateEvent($player, [
 			new ScoreTag("ppscore.rank", strval($this->plugin->getPlayerRank($player))),
 			new ScoreTag("ppscore.prefix", strval($this->plugin->getPrefix($player))),

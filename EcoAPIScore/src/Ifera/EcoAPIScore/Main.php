@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Ifera\EcoAPIScore;
 
@@ -9,7 +9,7 @@ use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase{
 
-	public function onEnable(){
+	public function onEnable() : void{
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 		$this->getServer()->getPluginManager()->registerEvents(new TagResolveListener($this), $this);
 	}

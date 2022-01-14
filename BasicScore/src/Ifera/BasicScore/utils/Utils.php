@@ -1,5 +1,5 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Ifera\BasicScore\utils;
 
@@ -11,7 +11,7 @@ class Utils{
 
 	private static ?ScoreHud $scoreHud = null;
 
-	public static function resolveDependency(Plugin $plugin): bool{
+	public static function resolveDependency(Plugin $plugin) : bool{
 		$server = $plugin->getServer();
 
 		if(is_null(self::$scoreHud)){
